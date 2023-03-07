@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background: #00092c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins';
+
+}
+
+section{
+    background: #00092c;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    perspective: 1000px;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    transform: translate(200px,200px);
+    background: linear-gradient(80deg,#2192FF,#0043f8);
+    border-radius: 50%;
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    transform: translate(-200px, -200px);
+    background: linear-gradient(90deg,#ff0000, #Ff5f00);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+.signup-box{
+    width: 80%;
+    max-width: 370px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: .75rem;
+    padding: 10px 0;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    border: 2px solid #2192FF;
+    transition: 0.5s ease;
+}
+
+
+.signup-box img {
+    width: 30%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 50%;
+    border:2px solid #2192FF;
+}
+
+.signup-box img:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.signup-box input{
+    width: 85%;
+    height: 40px;
+    margin: 12px auto;
+    display: block;
+    border: 1px solid rgba(116, 116, 116, 0.76);
+    border-radius: .75rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    padding-left: 15px;
+    background-color: transparent;
+    border: 2px solid #2192FF;
+    color: #fff;
+}
+
+
+
+.signup-box input:focus{
+    outline: none;
+}
+
+
+#check{
+    width: 20px;
+    max-width: 20px;
+    margin: 0 0 0 5%;
+    padding: 0;
+    height: 20px;
+    display: inline;
+    accent-color:#2192FF;
+}
+.label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding-left: 9px;
+    position: absolute;
+    color: #fff;
+}
+
+#submit-btn {
+  width: auto;
+  padding: 0 30px;
+  border: 2px solid #2192FF;
+  border-radius: .75rem;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  height: 50px;
+  transition: 0.15s;
+  float: right;
+  margin: 35px 5% 12px 0;
+  cursor: default;
+}
+
+.submit-div{
+    height: 200px;
+    width: 80%;
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: .75rem;
+    border: 1px solid rgba(116, 116, 116, 0.76);
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 50px rgba(43, 43, 43, 0.247);
+    display: block;
+}
+.submit-div i{
+    font-size: 40px;
+    padding-top: 50px;
+    color: #5271FF;
+}
+.submit-div h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
